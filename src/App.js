@@ -1,12 +1,12 @@
 import './App.css';
 import React, { Component } from 'react';
-import StopWatchSection from './components/StopWatchSection';
+import SignInForm from './components/SignInForm'
 
 
 class App extends Component {
   render() {
     return <>
-      <StopWatchSection />
+      <SignInForm />
     </>
   }
 }
