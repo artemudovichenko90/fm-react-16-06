@@ -1,0 +1,26 @@
+@use './../../../common/styles/variables' as *;
+@use './../../../common/styles/templates';
+@use './../../../common/styles/breakpoints' as *;
+  
+.container {
+  background-color: $bg-color;
+  color: $text-color;
+  @extend %text-align;
+
+  &__h2 {
+    padding-top: $size/4;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    width: $size*4;
+    @extend %one-line;
+
+    @media screen and(min-width: $md) {
+      width: $size;
+    }
+  }
+
+}

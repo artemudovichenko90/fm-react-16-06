@@ -1,22 +1,9 @@
-import './App.css';
+import './App.scss';
 import React, { Component } from 'react';
-import Calendar from './components/Calendar';
-
-
+import Chao from './components/ChaoSection/Chao';
 const App = () => {
-  const users = [
-    {
-      id: 1,
-      fname: 'bob',
-      isSelected: true
-    }, {
-      id: 2,
-      fname: 'Tom',
-      isSelected: false
-    }
-  ]
   return <>
-    <Calendar />
+    <Chao name='Ivan'/>
   </>
 }
 export default App;
