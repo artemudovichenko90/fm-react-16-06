@@ -18,7 +18,6 @@ class UserSection extends Component {
 
   setUserSelector = (newUsers) => {
     this.setState({ users: newUsers })
-
   }
 
   render() {

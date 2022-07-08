@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 class Chao extends Component {
   constructor(props) {
     super(props);
@@ -20,5 +21,7 @@ class Chao extends Component {
     return <h2>Bye! {name}!</h2>
   }
 }
-
+Chao.propTypes = {
+  name: PropTypes.string.isRequired,
+}
 export default Chao;
