@@ -1,26 +1,22 @@
 import './App.css';
 import React, { Component } from 'react';
-import Chao from './components/ChaoSection/Chao/index';
-import UserCard from './components/UserSection/UserCard/index';
-import UserList from './components/UserSection/UserList/index';
+import Calendar from './components/Calendar';
 
 
 const App = () => {
-  const users=[
+  const users = [
     {
       id: 1,
       fname: 'bob',
       isSelected: true
-    },{
+    }, {
       id: 2,
       fname: 'Tom',
       isSelected: false
     }
   ]
   return <>
-    {/* <Chao name={user.name} /> */}
-    <UserCard/>
-    {/* <UserList users={users} /> */}
+    <Calendar />
   </>
 }
 export default App;
