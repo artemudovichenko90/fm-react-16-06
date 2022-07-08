@@ -1,10 +1,10 @@
 import './App.scss';
 import React from 'react';
-import Grid from './components/Grid';
-
+import Flex from './components/Flex'
 const App = () => {
   return <>
-    <Grid />
+    <Flex/>
   </>
 }
+
 export default App;
