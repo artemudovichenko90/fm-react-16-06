@@ -1,9 +1,10 @@
 import './App.scss';
-import React, { Component } from 'react';
-import Chao from './components/ChaoSection/Chao';
+import React from 'react';
+import Grid from './components/Grid';
+
 const App = () => {
   return <>
-    <Chao name='Ivan'/>
+    <Grid />
   </>
 }
 export default App;
