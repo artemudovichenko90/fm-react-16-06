@@ -1,10 +1,12 @@
 import './App.scss';
 import React from 'react';
-import UsersLoader from './components/UsersLoader';
+import RouterSection from './components/RouterSection';
+
 const App = () => {
   return <>
-    <UsersLoader/>
+   <RouterSection/>
   </>
 }
 
 export default App;
+
