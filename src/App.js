@@ -1,9 +1,9 @@
 import './App.scss';
 import React from 'react';
-import Flex from './components/Flex'
+import UsersLoader from './components/UsersLoader';
 const App = () => {
   return <>
-    <Flex/>
+    <UsersLoader/>
   </>
 }
 
