@@ -1,10 +1,10 @@
 import './App.scss';
 import React from 'react';
-import PageCounter from './page/PageCounter';
+import RouterSection from './components/RouterSection';
 
 const App = () => {
   return <>
-   <PageCounter/>
+    <RouterSection />
   </>
 }
 

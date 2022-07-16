@@ -6,6 +6,7 @@ import Chao from './../ChaoSection/Chao';
 import StopWatch from './../StopWatchSection/StopWatch';
 import PageNotFount from '../../page/NotFound';
 import PageCounter from '../../page/PageCounter';
+import PageLoader from '../../page/PageLoader';
 const RouterSection = () => {
   return <>
     <div>static start for application</div>
@@ -14,7 +15,7 @@ const RouterSection = () => {
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/counter'>Counter</Link></li>
-          <li><Link to='/contact'>Contact</Link></li>
+          <li><Link to='/loader'>Loader</Link></li>
           <li><Link to='/winsizes'>Winsizes</Link></li>
           <li>Dashboard
             <ul>
@@ -27,7 +28,7 @@ const RouterSection = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<PageCounter />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/loader" element={<PageLoader />} />
         <Route path="/winsizes" element={<WindowSizes />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path="chao" element={<Chao name='elon' id={1} />} />
