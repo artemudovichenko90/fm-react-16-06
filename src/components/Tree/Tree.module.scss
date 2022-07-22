@@ -1,0 +1,15 @@
+@import './../../common/styles/templates';
+
+.light {
+  @extend %light;
+}
+
+.dark {
+  @extend %dark;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}

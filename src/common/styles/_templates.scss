@@ -7,3 +7,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+%light {
+  background-color: #fefefe;
+  color: #010101;
+}
+
+%dark {
+  background-color: #010101;
+  color: #fefefe;
+}

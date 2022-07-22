@@ -1,12 +1,12 @@
-import './App.scss';
-import React from 'react';
-import RouterSection from './components/RouterSection';
+import React, { Component } from 'react';
+import ContextSection from './components/ContextSection';
 
-const App = () => {
-  return <>
-    <RouterSection />
-  </>
+
+class App extends Component {
+
+  render() {
+    return <ContextSection />
+  }
 }
 
 export default App;
-
