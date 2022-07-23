@@ -1,11 +1,11 @@
 import React from 'react';
-import UserCard from '../UserCard';
+import UserCardWithUserContext from '../UserCard';
 
 const Child = (props) => {
   return (
     <section>
       <h2>Child</h2>
-      <UserCard />
+      <UserCardWithUserContext />
     </section>
   );
 }

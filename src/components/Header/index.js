@@ -5,38 +5,30 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { UserContext, ThemeContext } from '../../context';
 import styles from './Header.module.scss';
 import CONSTANTS from '../../constants';
+import { WithContextTheme, WithContextUser } from '../HOCs';
 const { THEMES } = CONSTANTS;
 
 class Header extends Component {
-  themeHandler = () => {
-
-  }
   render() {
-    return (<ThemeContext.Consumer>
-      {
-        ([theme, setTheme]) => {
-          const classNames = cx(styles.header, {
-            [styles.light]: theme === THEMES.LIGHT,
-            [styles.dark]: theme === THEMES.DARK
-          });
-          return <UserContext.Consumer>
-            {(user) => (
-              <header className={classNames}>
-                <div onClick={() => {
-                  const newTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-                  setTheme(newTheme);
-                }}>{theme === THEMES.LIGHT ? <WbSunnyIcon /> : <DarkModeIcon />}</div>
-                <p>
-                  Hi, {user.fname} {user.lname}
-                </p>
-              </header>
-            )}
-          </UserContext.Consumer>
-        }
-      }
-    </ThemeContext.Consumer>
+    const { theme, setTheme, user } = this.props;
+    const isLightTeme = theme === THEMES.LIGHT;
+    const classNames = cx(styles.header, {
+      [styles.light]: isLightTeme,
+      [styles.dark]: theme === THEMES.DARK
+    });
+    return (
+      <header className={classNames}>
+        <div onClick={() => {
+          const newTheme = isLightTeme ? THEMES.DARK : THEMES.LIGHT;
+          setTheme(newTheme);
+        }}>{isLightTeme ? <WbSunnyIcon /> : <DarkModeIcon />}</div>
+        <p>
+          Hi, {user.fname} {user.lname}
+        </p>
+      </header>
     );
   }
 }
-
-export default Header;
+const HeaderWithContextUser = WithContextUser(Header);
+const HeaderWithContextTheme = WithContextTheme(HeaderWithContextUser);
+export default HeaderWithContextTheme;

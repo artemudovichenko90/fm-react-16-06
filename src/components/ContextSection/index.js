@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Tree from './../Tree';
-import Header from './../Header';
+import TreeWithContextTheme from './../Tree';
+import HeaderWithContextTheme from './../Header';
 import { UserContext, ThemeContext } from './../../context';
 import CONSTANTS from './../../constants';
 const { THEMES } = CONSTANTS;
@@ -26,8 +26,8 @@ class ContextSection extends Component {
     return (
       <ThemeContext.Provider value={[theme, this.setTheme]}>
         <UserContext.Provider value={user}>
-          <Header />
-          <Tree />
+          <HeaderWithContextTheme />
+          <TreeWithContextTheme />
         </UserContext.Provider>
       </ThemeContext.Provider>
     );
