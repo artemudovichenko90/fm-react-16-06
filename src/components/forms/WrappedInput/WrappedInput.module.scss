@@ -1,0 +1,30 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.span {
+  text-transform: capitalize;
+}
+
+.input {
+  width: 70%;
+  padding: 5px;
+  background-color: #eee;
+}
+
+.error {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  background-color: #ff5555aa;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import styles from './SignInForm.module.css'
+import styles from './SignInForm.module.scss'
 const initialState = {
   email: '',
   pwd: '',
