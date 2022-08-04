@@ -25,3 +25,18 @@ export const getUsers = (options = {}) => {
   return fetch(`${config.BASE_URL}?${queryString.stringify(finallyOptions)}`)
     .then(response => response.json())
 }
+
+export const getUsersJSON = () => {
+  return fetch('./name.json')
+    .then(response => response.json())
+}
+
+export const getPhonesJSON = () => {
+  return fetch('./phone.json')
+    .then(response => response.json())
+}
+
+export const getPhoneBookJSON = () => {
+  return fetch('./phoneBook.json')
+    .then(response => response.json())
+}
