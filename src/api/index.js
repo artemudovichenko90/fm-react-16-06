@@ -40,3 +40,8 @@ export const getPhoneBookJSON = () => {
   return fetch('./phoneBook.json')
     .then(response => response.json())
 }
+
+export const getChatJSON = () => {
+  return fetch('./chat.json')
+    .then(response => response.json())
+}

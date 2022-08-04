@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Elon Musk"
+    },
+    {
+      "id": 2,
+      "name": "Ivan Ivanov"
+    },
+    {
+      "id": 3,
+      "name": "Petr Petrov"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "body": "text message111",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "body": "text message222",
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "body": "text message333",
+      "authorId": 3
+    },
+    {
+      "id": 4,
+      "body": "text message444",
+      "authorId": 3
+    }
+  ]
+}
