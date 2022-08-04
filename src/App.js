@@ -1,16 +1,27 @@
-import React from 'react';
-import { useLocation} from 'react-router-dom';
-import './App.scss';
-import logo from './logo.svg';
-import SignForm from './components/forms/SignForm';
-
+import React, { useState } from 'react';
+import { UserContext, ThemeContext } from './context/index';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './page/HomePage';
+import CONSTANTS from './constants';
+const { THEMES } = CONSTANTS;
 const App = () => {
-  const {pathname} = useLocation();
-  console.log(pathname);
+  const [isVisible, setIsVisible] = useState();
+  const [user, setUser] = useState({ id: 1, name: 'Elon' });
+  const themeStateArr = useState(THEMES.LIGHT);
+
+  const handlerVisible = () => {
+    setIsVisible(!isVisible);
+  }
   return (<>
-    <img src="/static/images/logo.png" />
-    <SignForm />
-    <img src={logo} />
+    <ThemeContext.Provider value={themeStateArr}>
+      <UserContext.Provider value={user}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+          </Routes>
+        </BrowserRouter>
+      </UserContext.Provider>
+    </ThemeContext.Provider>
   </>)
 }
 

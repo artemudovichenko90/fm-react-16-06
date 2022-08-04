@@ -1,3 +1,2 @@
-import { createContext } from "react";
-export const UserContext = createContext();
-export const ThemeContext = createContext();
+export { default as UserContext } from './UserContext';
+export { default as ThemeContext } from './ThemeContext';
