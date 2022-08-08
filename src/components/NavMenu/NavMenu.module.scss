@@ -1,0 +1,47 @@
+$widthNavMenu: 200px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: $widthNavMenu;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  left: -$widthNavMenu;
+  background-color: teal;
+  color: #fff;
+  transition: left 0.5s;
+}
+
+.list {
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 0.7em;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.closeBtn {
+  color: inherit;
+  padding: 0.5em;
+  margin-left: auto;
+}
+
+.openBtn {
+  color: teal;
+  position: fixed;
+  left: 20px;
+}
+
+.open {
+  left: 0;
+}

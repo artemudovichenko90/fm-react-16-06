@@ -4,7 +4,8 @@ import reducer from './reducer';
 const Chat = () => {
   const [state, dispatch] = useReducer(reducer, {
     users: [],
-    messages: []
+    messages: [],
+    error: null
   });
   useEffect(() => {
     getChatJSON()
